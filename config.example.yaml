@@ -1,0 +1,92 @@
+# Copy this file to config.yaml and edit it. config.yaml is gitignored
+# so your source list can stay private even in a public repo.
+
+# ---------------------------------------------------------------
+# BEAT: describe what you're looking for. This is the single most
+# important setting -- it's injected into every summarization prompt
+# and determines what counts as a "lead" vs. noise. Be specific.
+# ---------------------------------------------------------------
+beat: |
+  A fight with a face on it: a contest with real sides and something at
+  stake, carried by one vivid, obsessive, reportable person, with a
+  hidden engine or reveal that pulls a reader down the page -- and a
+  larger condition it turns out to be about, so the piece outlives its
+  own news cycle. The needle should be one nobody has nationalized yet,
+  found either in a subculture worth parachuting into or in a Pacific
+  story only he can reach (though stories reportable by phone and
+  documents work too).
+
+  Flag it if:
+  - Somebody is fighting somebody, and both sides have a real case
+  - There's a person at the center you can't look away from -- an obsessive, a grifter, someone in an extreme
+  - Something is hidden, disputed, or not what it appears to be
+  - You can name in one line what condition it crystallizes
+  - No national outlet has touched it, and there's a reason he could get it
+  - It's a story you could plausibly see in The New Yorker, The New York Times Magazine, The Atlantic, Harper's, Esquire, or Rolling Stone
+
+# ---------------------------------------------------------------
+# SOURCES: every source just needs a name + an RSS feed URL.
+#   - Podcasts: use the show's RSS feed (not the Apple/Spotify page).
+#     Find it via the podcast's own site, or a lookup tool like
+#     https://getrssfeed.com or https://castos.com/tools/find-podcast-rss-feed/
+#   - Newsletters: most platforms expose RSS, e.g. Substack feeds are
+#     usually at https://name.substack.com/feed
+#   - Local papers: look for a "/rss" or "/feed" link, usually in the
+#     site footer, or check https://<domain>/feed
+# ---------------------------------------------------------------
+sources:
+  podcasts:
+    - name: "Example Podcast"
+      rss: "https://example.com/podcast/feed.xml"
+
+  newsletters:
+    # Court Watch's weekly roundup is a list of ~30-40 one-line blurbs,
+    # each linking to a federal court filing (mostly PDFs hosted on
+    # CourtListener/RECAP). `mine_document_links: true` tells the
+    # pipeline to treat each linked document as its own item -- fetch
+    # the PDF, extract its text, and run *that* past your beat, instead
+    # of just summarizing the newsletter's one-liner. This is what
+    # actually does the "mining" for you.
+    - name: "Court Watch"
+      rss: "https://rss.beehiiv.com/feeds/BTVqUNjsIO.xml"
+      mine_document_links: true
+      # Optional: override which link destinations count as "documents".
+      # This default list covers RECAP/CourtListener, other *.uscourts.gov
+      # sites, and justice.gov press releases -- i.e. most of what
+      # Court Watch links to. Uncomment to customize:
+      # link_domains:
+      #   - "storage.courtlistener.com"
+      #   - "courtlistener.com"
+      #   - ".uscourts.gov"
+      #   - "justice.gov"
+
+  local_papers:
+    # Verified working RSS feeds as of writing -- add more the same way:
+    # find the outlet's "/feed" or "/rss" URL, or use a lookup tool like
+    # rss.feedspot.com to confirm one exists before adding it here.
+    - name: "Honolulu Civil Beat"
+      rss: "https://www.civilbeat.org/feed/"
+    - name: "Honolulu Star-Advertiser"
+      rss: "https://www.staradvertiser.com/feed/"
+    - name: "KHON2"
+      rss: "https://www.khon2.com/feed/"
+
+# How far back to look for items the very first time this runs
+# (so you don't get flooded with months of backlog). Ignored after
+# the first successful run, since state.json takes over from there.
+lookback_hours_first_run: 48
+
+# Where the daily digest email goes. SMTP credentials themselves are
+# set as secrets (see README), not here.
+email:
+  to: "cousin@example.com"        # the journalist's inbox -- the only
+                                    # thing they ever need to look at
+  greeting_name: "Alex"            # optional -- personalizes the digest
+  from_name: "Daily Lead Digest"
+  reply_to: "you@example.com"      # optional -- so if they hit reply,
+                                    # it lands with you, not the sending
+                                    # account
+  bcc:                             # optional -- silently cc yourself so
+                                    # you notice if something's wrong
+                                    # before they do
+    - "you@example.com"
