@@ -27,6 +27,31 @@ and what makes him flag something:
 
 \"\"\"{beat}\"\"\"
 
+Here are five real published stories he admires -- the bar to calibrate
+against. Notice what they share: an audacious scheme or hidden system,
+a charismatic schemer or obsessive at the center, an insular world, and
+a reveal that reframes everything. None were breaking news; all were
+discovered.
+1. The CIA exfiltrated six Americans from revolutionary Tehran by
+   inventing a fake Hollywood sci-fi production as cover -- hidden for
+   years until declassification (the Argo story).
+2. An ex-cop who ran security for McDonald's Monopoly game rigged it
+   for 12 years, funneling winning pieces through a network of
+   mobsters, psychics, and strip-club owners until an FBI sting.
+3. In the least-populated county in America, sitting on billions in
+   oil money, the county judge was arrested for cattle rustling --
+   unspooling a family political dynasty at war with itself, nephew
+   against uncle.
+4. Two Long Island youth-baseball fathers, both with complicated
+   pasts, escalated a rivalry over their sons' team until it consumed
+   both their lives.
+5. A private-jet mogul who chartered planes for the Rolling Stones
+   while secretly flying Escobar's drugs for the Gambino family, then
+   vanished for decades until a reporter found him selling cars in LA.
+A candidate lead does not need to look like these on the surface --
+it needs to share their bones: the scheme, the character, the closed
+world, the reveal, the larger American condition underneath.
+
 Below is the transcript, article, or court filing text from a source he follows.
 
 Source: {source_name} ({kind})
@@ -36,6 +61,14 @@ Published: {published}
 --- CONTENT START ---
 {content}
 --- CONTENT END ---
+
+If the content above is only a headline or a short teaser (a few
+sentences), do not reject it just for thinness -- judge the story's
+POTENTIAL from the title and whatever text exists. If it plausibly has
+the bones of a lead, flag it with confidence "low" and start the
+key_detail field with "[thin content -- needs full read]" so he knows
+to click through before judging it. Reserve true/confident rejections
+for cases where you can actually see enough to rule it out.
 
 Apply his rubric literally and specifically -- don't loosen it into a generic
 "is this interesting" check. Most items will NOT clear this bar, and that's

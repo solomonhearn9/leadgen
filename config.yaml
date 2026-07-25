@@ -24,6 +24,17 @@ beat: |
   - No national outlet has touched it, and there's a reason he could get it
   - It's a story you could plausibly see in The New Yorker, The New York Times Magazine, The Atlantic, Harper's, Esquire, or Rolling Stone
 
+  Do NOT flag:
+  - Stories where the central person is clearly mentally ill and that
+    illness fully explains their behavior. A scheming, obsessive, or
+    extreme character is what I want; someone in an untreated psychiatric
+    crisis is not a story engine, it's a tragedy. If you remove the
+    illness and there's no story left, cut it.
+  - Stories outside the U.S. and the Pacific region (Hawaii, Pacific
+    islands, Pacific Rim). EXCEPTION: a story so good on every other
+    criterion that geography shouldn't kill it -- but this should be
+    rare, and say so in your reasoning when you invoke it.
+
 # ---------------------------------------------------------------
 # SOURCES: every source just needs a name + an RSS feed URL.
 #   - Podcasts: use the show's RSS feed (not the Apple/Spotify page).
