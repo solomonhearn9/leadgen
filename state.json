@@ -1,9 +1,5 @@
 {
   "seen_ids": [
-    "https://www.staradvertiser.com/2026/07/23/breaking-news/hurricane-fausto-forecast-to-weaken-in-east-pacific/",
-    "https://www.staradvertiser.com/2026/07/23/breaking-news/openai-says-its-ai-models-escaped-and-attacked-digital-library/",
-    "https://www.staradvertiser.com/?p=1446728",
-    "https://www.staradvertiser.com/?p=1446712",
     "https://www.staradvertiser.com/?p=1446709",
     "https://www.staradvertiser.com/2026/07/23/hawaii-news/2-men-arrested-in-gold-bar-fraud-scheme-targeting-kupuna/",
     "https://www.staradvertiser.com/2026/07/23/hawaii-news/city-seek-input-on-water-quality-priorities/",
@@ -4999,7 +4995,11 @@
     "https://www.khon2.com/?p=3147683",
     "https://www.khon2.com/?p=3149493",
     "https://www.khon2.com/?p=3149412",
-    "https://www.khon2.com/?p=3149450"
+    "https://www.khon2.com/?p=3149450",
+    "https://www.staradvertiser.com/2026/10/07/breaking-news/russia-says-it-found-no-emergency-in-plague-lab/",
+    "https://www.staradvertiser.com/2026/10/07/breaking-news/world-has-nearly-burned-through-its-oil-stockpile-buffer-2/",
+    "https://www.staradvertiser.com/2026/10/07/breaking-news/nobel-chemistry-prize-goes-to-scientists-who-solved-mirror-image-mystery/",
+    "https://www.staradvertiser.com/2026/10/07/breaking-news/flood-watch-issued-for-kauai-county-oahu-through-thursday/"
   ],
   "buffer": []
 }
